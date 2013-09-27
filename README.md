@@ -27,3 +27,8 @@ See LICENSE.TXT file for more information.
 
 DESCRIPTION:
 ------------
+
+
+TODO:
+------------
+"Be sure to back up the CA certificate stored in /root/cacert.p12 This file is required to create replicas. The password for this file is the Directory Manager password"
