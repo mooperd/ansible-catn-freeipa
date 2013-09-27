@@ -1,6 +1,6 @@
 ---
 #==============================================================================+
-# Description : Variable file containing all common vars for a freeIPA install
+# Description : Playbook to set the system name of the freeIPA server 
 #
 # Website     : https://github.com/fubralimited/ansible-catn-freeipa
 #
@@ -33,5 +33,5 @@
 #
 #==============================================================================+
 
-freeipaserver:192.168.32.5
-hostname: serveripa.s01.lab
+- name: Creates the /etc/sysconfig/network-scrips/ifcfg-eth0 file 
+  template: src=etc-sysconfig-network-scripts-ifcfg-eth0.j2 dest=/etc/sysconfig/network-scripts/ifcfg-eth0

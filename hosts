@@ -1,3 +1,4 @@
 [servers]
-
+192.168.32.5
+#then I think we should put the url and deal it with DNS
 [clients]
