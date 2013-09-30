@@ -34,5 +34,16 @@
 #==============================================================================+
 
 - name: Apply iptables rules
-  command: lokkit -p 53:tcp && lokkit -p 53:udp && lokkit -p 80:tcp && lokkit -p 88:tcp && lokkit -p 88:udp && lokkit -p 123:udp && lokkit -p 389:tcp && lokkit -p 433:tcp && lokkit -p 464:tcp && lokkit -p 464:udp && lokkit -p 636:tcp && lokkit -p 7389:tcp
+  command: lokkit -p 53:tcp
+  command: lokkit -p 53:udp
+  command: lokkit -p 80:tcp 
+  command: lokkit -p 88:tcp 
+  command: lokkit -p 88:udp 
+  command: lokkit -p 123:udp 
+  command: lokkit -p 389:tcp 
+  command: lokkit -p 433:tcp 
+  command: lokkit -p 464:tcp 
+  command: lokkit -p 464:udp 
+  command: lokkit -p 636:tcp 
+  command: lokkit -p 7389:tcp 
   notify: restart iptables
