@@ -1,6 +1,6 @@
 ---
 #==============================================================================+
-# Description : Playbook to run server tasks for a freeIPA install
+# Description : Playbook to configure iptables for freeIPA server 
 #
 # Website     : https://github.com/fubralimited/ansible-catn-freeipa
 #
@@ -33,11 +33,17 @@
 #
 #==============================================================================+
 
-- include: set-system-hostname.yml
-- include: set-hosts.yml
-- include: set-resolv.conf.yml
-- include: set-ifcfg-eth0.yml
-- include: install-free-ipa.yml
-- include: iptables-config.yml
-- include: free-ipa-setup.yml
-
+- name: Apply iptables rules
+  command: lokkit -p 53:tcp
+  command: lokkit -p 53:udp
+  command: lokkit -p 80:tcp 
+  command: lokkit -p 88:tcp 
+  command: lokkit -p 88:udp 
+  command: lokkit -p 123:udp 
+  command: lokkit -p 389:tcp 
+  command: lokkit -p 433:tcp 
+  command: lokkit -p 464:tcp 
+  command: lokkit -p 464:udp 
+  command: lokkit -p 636:tcp 
+  command: lokkit -p 7389:tcp 
+  notify: restart iptables

@@ -1,6 +1,6 @@
 ---
 #==============================================================================+
-# Description : Playbook to run server tasks for a freeIPA install
+# Description : Playbook with handlers for FreeIPA server 
 #
 # Website     : https://github.com/fubralimited/ansible-catn-freeipa
 #
@@ -33,11 +33,5 @@
 #
 #==============================================================================+
 
-- include: set-system-hostname.yml
-- include: set-hosts.yml
-- include: set-resolv.conf.yml
-- include: set-ifcfg-eth0.yml
-- include: install-free-ipa.yml
-- include: iptables-config.yml
-- include: free-ipa-setup.yml
-
+- name: restart iptables
+  service: name=iptables state=restarted

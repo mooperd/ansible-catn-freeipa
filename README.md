@@ -29,6 +29,12 @@ DESCRIPTION:
 ------------
 
 
-TODO:
+TO DO:
 ------------
 "Be sure to back up the CA certificate stored in /root/cacert.p12 This file is required to create replicas. The password for this file is the Directory Manager password"
+-Parametrize commands such as User or Password in free-ipa-setup.yml
+-Keep working apache server
+
+ASSUMPTIONS: 
+-Network layer properly configured (eth0)
+
