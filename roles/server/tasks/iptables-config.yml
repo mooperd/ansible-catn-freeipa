@@ -33,6 +33,28 @@
 #
 #==============================================================================+
 
-- name: Apply iptables rules
-  command: lokkit -p 53:tcp && lokkit -p 53:udp && lokkit -p 80:tcp && lokkit -p 88:tcp && lokkit -p 88:udp && lokkit -p 123:udp && lokkit -p 389:tcp && lokkit -p 433:tcp && lokkit -p 464:tcp && lokkit -p 464:udp && lokkit -p 636:tcp && lokkit -p 7389:tcp
-  notify: restart iptables
+- name: Apply DNS/TCP iptables rule
+  command: lokkit -p 53:tcp
+- name: Apply DNS/UDP iptables rule
+  command: lokkit -p 53:udp
+- name: Apply HTTP/TCP iptables rule
+  command: lokkit -p 80:tcp
+- name: Apply Kerberos—authentication system/TCP iptables rule
+  command: lokkit -p 88:tcp
+- name: Apply Kerberos—authentication system/UDP iptables rule
+  command: lokkit -p 88:udp
+- name: Apply NTP/UDP iptables rule
+  command: lokkit -p 123:udp
+- name: Apply LDAP/TCP iptables rule
+  command: lokkit -p 389:tcp
+- name: Apply HTTPS/TCP iptables rule
+  command: lokkit -p 433:tcp 
+- name: Apply Kerberos Change/Set password TCP iptables rule
+  command: lokkit -p 464:tcp
+- name: Apply Kerberos Change/Set password UDP iptables rule
+  command: lokkit -p 464:udp
+- name: Apply LDAPS/TCP iptables rule
+  command: lokkit -p 636:tcp
+- name: Apply DOGTAG/ TCP iptables rule
+  command: lokkit -p 7389:tcp
+
