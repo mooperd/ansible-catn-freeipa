@@ -27,14 +27,23 @@ See LICENSE.TXT file for more information.
 
 DESCRIPTION:
 ------------
+This playbook installs a FreeIPA Server in a node. 
+All the vars to edit are in /group_vars/all.yml
+
+HOW TO USE:
+-----------
+Edit /group_vars/all.yml with your desired configuration. 
+Edit /hosts with THE SAME ip address than the previous configuration file. 
 
 
 TO DO:
 ------------
 "Be sure to back up the CA certificate stored in /root/cacert.p12 This file is required to create replicas. The password for this file is the Directory Manager password"
--Parametrize commands such as User or Password in free-ipa-setup.yml
 -Keep working apache server
 
-ASSUMPTIONS: 
--Network layer properly configured (eth0)
-
+ASSUMPTIONS:
+------------
+-Network layer properly configured (eth0).
+-Kerberos server installed and configured. 
+-Other layers firewalls configured to allow al least HTTP/S, DNS, NTP,  Kerberos, LDAP/S and DOGTAG.
+-Ssh connection to hosts. 

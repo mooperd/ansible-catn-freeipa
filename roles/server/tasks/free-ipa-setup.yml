@@ -34,4 +34,4 @@
 #==============================================================================+
 
 - name: Setup FreeIPA server
-  command: ipa-server-install -a secretPass --hostname=serveripa.s01.lab -r S01.LAB -p secretPass2 -n s01.lab -U --setup-dns --forwarder=192.168.32.1
+  command: ipa-server-install -a {{ password }} --hostname={{ hostname }} -r {{ kerberos_realm_name }} -p {{ directory_manager_password }} -n {{ domain_search }} -U --setup-dns --forwarder={{ dns_forwarder_ip }}

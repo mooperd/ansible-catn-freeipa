@@ -57,4 +57,3 @@
   command: lokkit -p 636:tcp
 - name: Apply DOGTAG/ TCP iptables rule
   command: lokkit -p 7389:tcp
-

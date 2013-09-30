@@ -32,6 +32,14 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 #==============================================================================+
-
-freeipaserver:192.168.32.5
+freeipaserver_ip: 192.168.32.7
 hostname: serveripa.s01.lab
+alias: serveripa
+domain_search: s01.lab
+nameserver_ip: 10.199.2.1
+gateway_ip: 192.168.32.1
+password: secretPass
+kerberos_realm_name: S01.LAB
+directory_manager_password: secretPass2
+dns_forwarder_ip: 192.168.32.1
+
