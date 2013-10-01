@@ -49,6 +49,6 @@ ASSUMPTIONS:
 
 CURRENT PROBLEM:
 ------------
--To skip a ca.cert problem I copied the cert to the client. This problem will be fixed or the copy will be performed in the playbook. 
+-To skip a ca.cert problem I copied the cert to the client (based on this solution: https://fedorahosted.org/freeipa/ticket/3457 ). This problem will be fixed or the copy will be performed in the playbook. 
 -It seems the problem is the DNS. But also could be another problem regarding to the previous problem. 
 -I leave the client log to show what happens.
