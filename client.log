@@ -1,0 +1,38 @@
+2013-10-01T16:29:50Z DEBUG /usr/sbin/ipa-client-install was invoked with options: {'domain': 'freeipa.lab', 'force': False, 'krb5_offline_passwords': True, 'primary': $
+2013-10-01T16:29:50Z DEBUG missing options might be asked for interactively later
+2013-10-01T16:29:50Z DEBUG Loading Index file from '/var/lib/ipa-client/sysrestore/sysrestore.index'
+2013-10-01T16:29:50Z DEBUG Loading StateFile from '/var/lib/ipa-client/sysrestore/sysrestore.state'
+2013-10-01T16:29:50Z DEBUG [IPA Discovery]
+2013-10-01T16:29:50Z DEBUG Starting IPA discovery with domain=freeipa.lab, servers=['192.168.32.5'], hostname=freeipa-client
+2013-10-01T16:29:50Z DEBUG Server and domain forced
+2013-10-01T16:29:50Z DEBUG [Kerberos realm search]
+2013-10-01T16:29:50Z DEBUG Search DNS for TXT record of _kerberos.freeipa.lab.
+2013-10-01T16:29:50Z DEBUG No DNS record found
+2013-10-01T16:29:50Z DEBUG [LDAP server check]
+2013-10-01T16:29:50Z DEBUG Verifying that 192.168.32.5 (realm None) is an IPA server
+2013-10-01T16:29:50Z DEBUG Init LDAP connection with: ldap://192.168.32.5:389
+2013-10-01T16:29:50Z ERROR LDAP Error: Connect error: TLS error -8157:Certificate extension not found.
+2013-10-01T16:29:50Z DEBUG Discovery result: UNKNOWN_ERROR; server=None, domain=freeipa.lab, kdc=None, basedn=None
+2013-10-01T16:29:50Z DEBUG Validated servers:
+2013-10-01T16:29:50Z DEBUG will use discovered domain: freeipa.lab
+2013-10-01T16:29:50Z DEBUG IPA Server not found
+2013-10-01T16:29:50Z DEBUG [IPA Discovery]
+2013-10-01T16:29:50Z DEBUG Starting IPA discovery with domain=freeipa.lab, servers=['192.168.32.5'], hostname=freeipa-client
+2013-10-01T16:29:50Z DEBUG Server and domain forced
+2013-10-01T16:29:50Z DEBUG [Kerberos realm search]
+2013-10-01T16:29:50Z DEBUG Search DNS for TXT record of _kerberos.freeipa.lab.
+2013-10-01T16:29:50Z DEBUG No DNS record found
+2013-10-01T16:29:50Z DEBUG [LDAP server check]
+2013-10-01T16:29:50Z DEBUG Verifying that 192.168.32.5 (realm None) is an IPA server
+2013-10-01T16:29:50Z DEBUG Init LDAP connection with: ldap://192.168.32.5:389
+2013-10-01T16:29:50Z ERROR LDAP Error: Connect error: TLS error -8157:Certificate extension not found.
+2013-10-01T16:29:50Z DEBUG Discovery result: UNKNOWN_ERROR; server=None, domain=freeipa.lab, kdc=None, basedn=None
+2013-10-01T16:29:50Z DEBUG Validated servers:
+2013-10-01T16:29:50Z ERROR Failed to verify that 192.168.32.5 is an IPA Server.
+2013-10-01T16:29:50Z ERROR This may mean that the remote server is not up or is not reachable due to network or firewall settings.
+2013-10-01T16:29:50Z INFO Please make sure the following ports are opened in the firewall settings:
+     TCP: 80, 88, 389
+     UDP: 88 (at least one of TCP/UDP ports 88 has to be open)
+Also note that following ports are necessary for ipa-client working properly after enrollment:
+     TCP: 464
+

@@ -48,7 +48,7 @@
 - name: Apply LDAP/TCP iptables rule
   command: lokkit -p 389:tcp
 - name: Apply HTTPS/TCP iptables rule
-  command: lokkit -p 433:tcp 
+  command: lokkit -p 443:tcp 
 - name: Apply Kerberos Change/Set password TCP iptables rule
   command: lokkit -p 464:tcp
 - name: Apply Kerberos Change/Set password UDP iptables rule

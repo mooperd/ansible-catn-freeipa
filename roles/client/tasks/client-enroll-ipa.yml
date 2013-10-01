@@ -1,6 +1,6 @@
 ---
 #==============================================================================+
-# Description : Playbook to run server tasks for a freeIPA install
+# Description : Playbook to enroll freeIPA client
 #
 # Website     : https://github.com/fubralimited/ansible-catn-freeipa
 #
@@ -33,11 +33,5 @@
 #
 #==============================================================================+
 
-- include: set-system-hostname.yml
-#- include: set-hosts.yml
-#- include: set-resolv.conf.yml
-#- include: set-ifcfg-eth0.yml
-#- include: install-free-ipa.yml
-#- include: iptables-config.yml
-#- include: free-ipa-setup.yml
-
+- name: Enroll IPA client to IPA server unattended 
+  command: ipa-client-install  -N -p {{ principal_user }} -w {{ principal_password }} --enable-dns-updates --mkhomedir --unattended --hostname {{ client_hostname }} --server {{ freeipaserver_ip }} --domain {{ domain_search }} --realm {{ kerberos_realm_name }}

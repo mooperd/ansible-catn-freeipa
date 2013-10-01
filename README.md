@@ -39,7 +39,6 @@ Edit /hosts with THE SAME ip address than the previous configuration file.
 TO DO:
 ------------
 "Be sure to back up the CA certificate stored in /root/cacert.p12 This file is required to create replicas. The password for this file is the Directory Manager password"
--Keep working apache server
 
 ASSUMPTIONS:
 ------------

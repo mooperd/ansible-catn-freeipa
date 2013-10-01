@@ -32,14 +32,27 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 #==============================================================================+
-freeipaserver_ip: 192.168.32.7
-hostname: serveripa.s01.lab
-alias: serveripa
-domain_search: s01.lab
+#server FreeIPA variables
+freeipaserver_ip: 192.168.32.5
+hostname: pabloserver.freeipa.lab
+alias: pabloserver
+domain_search: freeipa.lab
 nameserver_ip: 10.199.2.1
 gateway_ip: 192.168.32.1
 password: secretPass
-kerberos_realm_name: S01.LAB
+kerberos_realm_name: FREEIPA.LAB
 directory_manager_password: secretPass2
 dns_forwarder_ip: 192.168.32.1
 
+#client FreeIPA variables
+client_hostname: freeipa-client
+#client connection
+principal_user: admin
+principal_password: secretPass
+
+
+#client /etc/sudo-ldap.conf variables
+dc1: freeipa
+dc0: lab
+tls_cacertfile_path: /etc/ipa/ca.crt
+uri_LDAP: ldap://pabloserver.freeipa.lab

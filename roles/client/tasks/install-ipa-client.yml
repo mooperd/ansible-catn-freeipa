@@ -1,6 +1,6 @@
 ---
 #==============================================================================+
-# Description : Playbook to run server tasks for a freeIPA install
+# Description : Playbook to install packages for freeIPA client
 #
 # Website     : https://github.com/fubralimited/ansible-catn-freeipa
 #
@@ -33,11 +33,14 @@
 #
 #==============================================================================+
 
-- include: set-system-hostname.yml
-#- include: set-hosts.yml
-#- include: set-resolv.conf.yml
-#- include: set-ifcfg-eth0.yml
-#- include: install-free-ipa.yml
-#- include: iptables-config.yml
-#- include: free-ipa-setup.yml
+- name: Install ipa-client packages
+  yum: name=ipa-client state=present
 
+- name: Apply Active Directory/TCP iptables rule
+  command: lokkit -p 464:tcp
+
+- name: Apply Active Directory/UPD iptables rule
+  command: lokkit -p 464:udp
+
+- name: Apply NTP/UPD iptables rule
+  command: lokkit -p 464:udp
