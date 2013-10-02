@@ -46,6 +46,7 @@ ASSUMPTIONS:
 -Kerberos server installed and configured. 
 -Other layers firewalls configured to allow al least HTTP/S, DNS, NTP,  Kerberos, LDAP/S and DOGTAG.
 -Ssh connection to hosts. 
+
 =======
 
 CURRENT PROBLEM:
