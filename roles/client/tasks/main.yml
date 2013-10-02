@@ -34,5 +34,5 @@
 #==============================================================================+
 
 - include: install-ipa-client.yml
-- include: client-enroll-ipa.yml
 - include: configure-ldap.yml 
+- include: client-enroll-ipa.yml

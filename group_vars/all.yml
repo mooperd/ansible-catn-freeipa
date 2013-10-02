@@ -55,4 +55,6 @@ principal_password: secretPass
 dc1: freeipa
 dc0: lab
 tls_cacertfile_path: /etc/ipa/ca.crt
-uri_LDAP: ldap://pabloserver.freeipa.lab
+uri_LDAP: ldaps://pabloserver.freeipa.lab
+#uri_LDAP: ldapi://%2fvar%2frun%2fslapd-FREEIPA-LAB.socket
+#regarding to usi_LDAP, I am not sure which one I should choose. 

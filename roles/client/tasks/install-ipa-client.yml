@@ -43,4 +43,4 @@
   command: lokkit -p 464:udp
 
 - name: Apply NTP/UPD iptables rule
-  command: lokkit -p 464:udp
+  command: lokkit -p 123:udp
